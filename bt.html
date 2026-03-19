@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khô Gà Đè Tem - Đặc Sản Bộ Tộc</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bt.css" />
+</head>
+<body>
+
+    <header class="header-section shadow-sm sticky-top bg-white">
+        <div class="container py-2 py-md-3">
+            <div class="row align-items-center">
+                <div class="col-md-2 col-4">
+                    <a href="#" class="d-block text-center text-md-start">
+                        <img src="qq.jpg" class="img-fluid logo-img" alt="Logo" style="max-height: 60px;">
+                    </a>
+                </div>
+
+                <div class="col-md-7 d-none d-md-block position-relative">
+                    <div class="search-box">
+                        <div class="input-group">
+                            <input type="text" id="searchInput" class="form-control border-end-0" placeholder="Tìm kiếm sản phẩm..." autocomplete="off">
+                            <button class="btn btn-warning px-4"><span class="material-icons align-middle">search</span></button>
+                        </div>
+                        <div id="search-results" class="search-results-dropdown shadow-lg list-group"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-8 d-flex justify-content-end gap-2 gap-md-3 align-items-center">
+                    <button class="btn btn-light d-md-none rounded-circle icon-btn" onclick="toggleMobileSearch()">
+                        <span class="material-icons">search</span>
+                    </button>
+                    <button class="btn btn-light rounded-circle icon-btn" onclick="handleAccountClick()">
+                        <span class="material-icons">person</span>
+                    </button>
+                    <button class="btn btn-light rounded-circle icon-btn position-relative" onclick="handleCartClick()">
+                        <span class="material-icons">shopping_cart</span>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileSearchBox" class="bg-light p-2 d-md-none border-top slide-down" style="display: none;">
+            <div class="container position-relative">
+                <input type="text" id="mobileSearchInput" class="form-control" placeholder="Nhập tên sản phẩm...">
+                <div id="mobile-search-results" class="search-results-dropdown shadow-lg list-group mt-1"></div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom">
+            <div class="container">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto gap-md-4">
+                        <li class="nav-item"><a class="nav-link active" href="#">TRANG CHỦ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">SẢN PHẨM</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">TIN TỨC</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">LIÊN HỆ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-4">
+        <div class="container">
+            <section class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+                <div class="row g-0 p-4">
+                    <div class="col-md-5">
+                        <div class="product-gallery">
+                            <div class="main-image-container border rounded-3 position-relative mb-3">
+                                <button class="btn-nav prev" onclick="prevImg()">‹</button>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBMiv6xJA3Ew6rJm1UIa9Qg3nm75lPo72rpg&s" id="mainImg" class="img-fluid" alt="Main product">
+                                <button class="btn-nav next" onclick="nextImg()">›</button>
+                            </div>
+                            <div class="thumb-wrapper d-flex gap-2 justify-content-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBMiv6xJA3Ew6rJm1UIa9Qg3nm75lPo72rpg&s" class="thumb active" alt="Thumb 1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT62q4YwpDs-Mko59v5hP7Fir3pRKxYtFXm0Q&s" class="thumb" alt="Thumb 2">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfRurtbi-UOXkisC5fH8_cYQKW9rzJOU-iw&s" class="thumb" alt="Thumb 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 ps-md-5 mt-4 mt-md-0">
+                        <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="#">Trang chủ</a></li><li class="breadcrumb-item active">Sản phẩm</li></ol></nav>
+                        <h1 class="h2 fw-bold text-dark mb-3">Khô gà đè tem loại đặc biệt</h1>
+                        <p class="text-muted mb-4 small">Thương hiệu: <strong>Bộ Tộc Thanh Độ</strong> | Tình trạng: <span class="text-success">Còn hàng</span></p>
+                        <div class="price-section p-3 bg-light rounded-3 mb-4">
+                            <h2 class="text-danger fw-bold mb-0">150.000đ</h2>
+                            <small class="text-muted"><del>200.000đ</del> <span class="badge bg-danger ms-1">-25%</span></small>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <span class="fw-bold">Số lượng:</span>
+                            <div class="input-group" style="width: 130px;">
+                                <input type="number" class="form-control text-center rounded-3" value="1" min="1">
+                            </div>
+                        </div>
+                        <div class="d-grid d-md-flex gap-2">
+                            <button class="btn btn-danger btn-lg px-5 py-3 shadow-sm rounded-3" onclick="handleCartClick()">MUA NGAY</button>
+                            <button class="btn btn-outline-dark btn-lg px-4 rounded-3" onclick="handleCartClick()">THÊM VÀO GIỎ</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card border-0 shadow-sm p-4 rounded-4 mb-4">
+                        <h4 class="fw-bold border-bottom pb-3">Chi tiết sản phẩm</h4>
+                        <div class="content text-muted mt-3">
+                            <p>Được làm từ ức gà tươi tuyển chọn kết hợp lá chanh thơm mát...</p>
+                            <ul class="ps-3">
+                                <li>Khối lượng: 500g</li>
+                                <li>HSD: 6 tháng</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 rounded-4">
+                        <h4 class="fw-bold border-bottom pb-3">Sản phẩm khác</h4>
+                        <div class="related-list mt-3">
+                            <div class="d-flex gap-3 mb-3 pb-2 border-bottom border-light align-items-center">
+                                <img src="https://via.placeholder.com/60" class="rounded-3" alt="Related">
+                                <div><h6 class="mb-0 fw-bold">Khô bò sợi</h6><small class="text-danger">180.000đ</small></div>
+                            </div>
+                            <div class="d-flex gap-3 align-items-center">
+                                <img src="https://via.placeholder.com/60" class="rounded-3" alt="Related">
+                                <div><h6 class="mb-0 fw-bold">Mực hấp dừa</h6><small class="text-danger">220.000đ</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 class="fw-bold text-warning">BỘ TỘC THANH ĐỘ</h5>
+                    <p class="small text-white-50">Địa chỉ: 123 Đường Số 1, Quận Đô, TP. HCM</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-0">© 2026 Bản quyền thuộc về Bộ Tộc</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="myModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0"><div class="modal-body text-center p-5"><span class="material-icons text-success display-4">check_circle</span><h4 class="mt-3">Thành công!</h4><p>Sản phẩm đã nằm trong giỏ hàng của bạn.</p></div></div></div></div>
+    
+    <div class="modal fade" id="accountModal" tabindex="-1"><div class="modal-dialog modal-sm modal-dialog-centered"><div class="modal-content p-4 text-center border-0 shadow"><h5 class="fw-bold mb-4">Xin chào!</h5><a href="login.html" class="btn btn-danger w-100 py-2 mb-2">ĐĂNG NHẬP</a><a href="register.html" class="btn btn-outline-dark w-100 py-2">ĐĂNG KÝ</a></div></div></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bt.js"></script>
+</body>
+</html>
