@@ -1,70 +1,116 @@
-/* Kế thừa toàn bộ từ register.css của bạn */
+/* 1. RESET & NỀN TẢNG */
 #khungtrang {
-  background: linear-gradient(90deg, #e0f7fa, #ffffff, #a8e6cf);
-  color: #333;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
+    background: linear-gradient(90deg, #e0f7fa, #ffffff, #a8e6cf);
+    color: #333;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
 }
 
+/* 2. HIỆU ỨNG CHỮ CHẠY (MARQUEE) */
 .marquee {
-  width: 100%;
-  overflow: hidden;
-  background-color: #0dcaf0; 
-  padding: 5px 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #0dcaf0; 
+    padding: 5px 0;
 }
 
 .marquee span {
-  display: inline-block;
-  font-weight: 500;
-  animation: marquee 10s linear infinite;
+    display: inline-block;
+    font-weight: 500;
+    animation: marquee 10s linear infinite;
 }
 
 @keyframes marquee {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
 }
 
+/* 3. CONTAINER CHÍNH (FORM) */
+/* Gộp các thuộc tính từ hai class bạn khai báo */
+.login-container, 
 .container.text-center.border {
-  max-width: 450px !important; /* Đăng nhập cần gọn hơn đăng ký */
-  margin: 50px auto !important;
-  padding: 40px 30px !important;
-  background-color: #ffffff !important;
-  border: none !important;
-  border-radius: 15px !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    width: 95%; /* Tránh dính sát mép trên mobile */
+    max-width: 450px; 
+    margin: 50px auto;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* 4. CÁC THÀNH PHẦN TRONG FORM */
 .h2.text-primary {
-  font-weight: 700;
-  margin-bottom: 25px;
-  text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    /* Giữ màu nguyên bản từ class text-primary của Bootstrap */
 }
 
 .form-label {
-  font-weight: 600;
-  color: #495057;
-  font-size: 0.9rem;
+    font-weight: 600;
+    color: #495057;
+    font-size: 0.9rem;
 }
 
 .form-control {
-  border-radius: 8px !important;
-  padding: 10px 15px;
+    border-radius: 8px;
+    padding: 10px 15px;
 }
 
-button.btn-primary {
-  padding: 12px;
-  font-weight: 600;
-  border-radius: 8px;
-  background: linear-gradient(to right, #007bff, #0056b3);
-  border: none;
-  transition: all 0.3s ease;
+/* 5. NÚT BẤM (BUTTON) */
+button.btn-primary, .btn-login {
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    border: none;
+    transition: all 0.3s ease;
+    color: white;
 }
 
 button.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }
 
-.input-group .btn {
-  height: auto;
+/* 6. RESPONSIVE - TỐI ƯU MOBILE */
+@media (max-width: 576px) {
+    #khungtrang {
+        background: white; /* Bỏ gradient trên mobile cho thoáng */
+    }
+
+    .login-container,
+    .container.text-center.border {
+        margin: 20px auto;
+        padding: 25px 20px;
+        box-shadow: none; 
+        border: 1px solid #eee;
+    }
+
+    h2, .h2.text-primary {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        height: 48px; 
+        font-size: 16px; /* Chống auto-zoom iOS */
+    }
+
+    button.btn-primary, .btn-login {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    /* Xếp dọc các link phụ */
+    .row.mb-3 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .col-6 {
+        width: 100%;
+        text-align: center !important;
+    }
 }
