@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nho Khô </title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/product.js"></script>
+    <link rel="stylesheet" href="../css/product.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header-section shadow-sm sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a href="home.html">
+                    <img src="../img/logo.jpg" alt="Logo" class="logo" style="margin-right: 10px;">
+                </a>
+                <div class="d-flex justify-content-center flex-grow-1">
+                    <div class="position-relative" style="width:600px;">
+                        <input type="text" id="searchInput" class="form-control ps-5" placeholder="Tìm kiếm" style="border-radius: 20px;">
+                        <div class="search-icon position-absolute top-50 end-0 translate-middle-y me-3">
+                            <img src="../img/icontk.png" alt="Icon tìm kiếm" width="14" height="14">
+                        </div>
+                        <div id="search-results" class="search-results-dropdown shadow-lg list-group"></div>
+                    </div>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html#tt">Thông tin</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sản phẩm</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                            <a class="dropdown-item" href="home.html#spc">Sản phẩm chính</a>
+                            </li>
+                            <li><a class="dropdown-item" href="home.html#spp">Sản phẩm phụ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="home.html#bl">Dịch vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html#lh">Liên hệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Đăng nhập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Đăng ký</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="py-4" style="margin-top: 80px;">
+        <div class="container">
+            <section class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+                <div class="row g-0 p-4">
+                    <div class="col-md-5">
+                        <div class="product-gallery">
+                            <div class="main-image-container border rounded-3 position-relative mb-3">
+                                <button class="btn-nav prev" onclick="prevImg()">‹</button>
+                                <img src="../img/nhokho.png" id="mainImg" class="img-fluid" alt="Main product">
+                                <button class="btn-nav next" onclick="nextImg()">›</button>
+                            </div>
+                            <div class="thumb-wrapper d-flex gap-2 justify-content-center">
+                                <img src="../img/nhokho.png" class="thumb active" alt="Thumb 1" onclick="changeImg(0)">
+                                <img src="../img/nhokho1.png" class="thumb" alt="Thumb 2" onclick="changeImg(1)">
+                                <img src="../img/nhokho2.png" class="thumb" alt="Thumb 3" onclick="changeImg(2)">
+                                <img src="../img/nhokho3.png" class="thumb" alt="Thumb 4" onclick="changeImg(3)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 ps-md-5 mt-4 mt-md-0">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                                <li class="breadcrumb-item active">Sản phẩm</li>
+                            </ol>
+                        </nav>
+                        <h1 class="h2 fw-bold text-dark mb-3">Nho Khô Vàng SaiGon Food 1KG SaigonFood Drifood
+                        </h1>
+                        <p class="text-muted mb-4 small">Thương hiệu: <strong>Drifood</strong> | Tình trạng: <span class="text-success">Còn hàng</span></p>
+                        <div class="price-section p-3 bg-light rounded-3 mb-4">
+                            <h2 class="text-danger fw-bold mb-0">48.853đ</h2>
+                            <small class="text-muted"><del>52.000đ</del> <span class="badge bg-danger ms-1">-6%</span></small>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <span class="fw-bold">Số lượng:</span>
+                            <div class="input-group" style="width: 130px;">
+                                <input type="number" class="form-control text-center rounded-3" value="1" min="1">
+                            </div>
+                        </div>
+                        <div class="d-grid d-md-flex gap-2">
+                            <button class="btn btn-danger btn-lg px-5 py-3 shadow-sm rounded-3" onclick="handleCartClick()">MUA NGAY</button>
+                            <button class="btn btn-outline-dark btn-lg px-4 rounded-3" onclick="handleCartClick()">THÊM VÀO GIỎ</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card border-0 shadow-sm p-4 rounded-4 mb-4">
+                        <h4 class="fw-bold border-bottom pb-3">Chi tiết sản phẩm</h4>
+                        <div class="content text-muted mt-3">
+                            <p>Tên sản phẩm: NHO SẤY KHÔ BÌNH THUẬN HÀNG LOẠI 1</p>
+                            <p>Thành Phần: nho</p>
+                            <P>Khối lượng : 1kg</P>
+                            <p>Quy cách đóng gói : Sản phẩm được đóng lon pet </p>
+                            <p>Ngày Sản Xuất:  in trên bao bì</p>
+                            <p>Hạn sử dụng: 6 tháng. </p>
+                            <p>Hướng dẫn bảo quản: Nơi khô ráo, thoáng mát hoặc bảo quản tủ lạnh. Tránh ánh nắng mặt trời trực tiếp</p>
+                            <p>Hướng dẫn sử dụng:  Dùng trực tiếp ko cần chế biến</p>
+                            <p>Công Dụng: Nho xanh không chỉ chứa nhiều flavonoid và các khoáng chất mà nó còn chứa rất nhiều các loại vitamin. Một lượng lớn vitamin có trong nho xanh như vitamin A, C, K giúp tăng cường các hệ cơ quan trong cơ thể, đặc biệt là hệ miễn dịch.</p>
+                            <p>Xuất xứ : Bình Thuận - Việt Nam </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm p-4 rounded-4">
+                        <h4 class="fw-bold border-bottom pb-3">Sản phẩm khác</h4>
+                        <div class="related-list mt-3">
+                            <div class="d-flex gap-3 mb-3 pb-2 border-bottom border-light align-items-center">
+                                <a href="product13.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                                    <img src="../img/mitsay.png" class="rounded-3" alt="Khô mực 1 nắng" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <div>
+                                        <h6 style="margin: 0; font-weight: bold; color:#333;">Mít sấy</h6>
+                                        <small style="color: red;">22.344đ</small>
+                                    </div>
+
+                                </a>
+                            </div>
+                            <div class="d-flex gap-3 align-items-center">
+                                <a href="product15.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                                    <img src="../img/chuoisay.png" class="rounded-3" alt="Khô mực 1 nắng" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <div>
+                                        <h6 style="margin: 0; font-weight: bold; color:#333;">Chuối sấy</h6>
+                                        <small style="color: red;">52.000đ</small>
+                                    </div>
+
+                                </a>
+                            </div>
+                            <div class="d-flex gap-3 align-items-center mt-4">
+                                <a href="product16.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                                    <img src="../img/mienkho.png" class="rounded-3" alt="Khô mực 1 nắng" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <div>
+                                        <h6 style="margin: 0; font-weight: bold; color:#333;">Miến Khô</h6>
+                                        <small style="color: red;">44.500đ</small>
+                                    </div>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="
+  background-image: url('../img/footer.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px 0;">
+        <div class="container">
+            <div class="row text-center text-md-start">
+
+                <!-- Cột 1 -->
+                <div class="col-4 mb-3 d-flex flex-column align-items-center text-center">
+                    <img src="../img/logo.jpg" alt="Logo" class="footer-logo" style="width: 100px;height: 100px;">
+                    <p style="color: white; margin-top: 10px;">
+                        Chuyên cung cấp các loại đồ khô chất lượng, đảm bảo an toàn và nguồn gốc rõ ràng. Cam kết mang đến hương vị thơm ngon và sự hài lòng cho khách hàng
+                    </p>
+                </div>
+
+                <!-- Cột 2 -->
+                <div class="col-4 mb-3">
+                    <h5>Chi nhánh</h5>
+                    <hr style="border: none; border-top: 2px dotted #38ef7d;">
+                </div>
+
+                <!-- Cột 3 -->
+                <div class="col-4 mb-3">
+                    <h5>Liên hệ</h5>
+                    <hr style="border: none; border-top: 2px dotted #38ef7d;">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

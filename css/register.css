@@ -1,0 +1,170 @@
+/* Tổng thể trang */
+#khungtrang {
+  background: linear-gradient(90deg, #e0f7fa, #ffffff, #a8e6cf);
+  color: #333; /* chữ tối để dễ đọc trên nền sáng */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar { min-height: 75px; }
+    .navbar img.logo { height: 75px; width: auto; }
+    .row h5 { font-size: 20px; }
+    .row p  { font-size: 16px; line-height: 1.5; }
+/* Banner và Chữ chạy (Marquee) */
+.banner {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: #007bff; /* Màu xanh Bootstrap chính */
+  border-radius: 4px;
+}
+
+.marquee span {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  animation: marquee 8s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(200%); /* Bắt đầu từ ngoài cùng bên TRÁI */
+  }
+  100% {
+    transform: translateX(-100%); /* Kết thúc ở ngoài cùng bên PHẢI */
+  }
+}
+
+/* Header & Logo */
+.header-section {
+  border-bottom: 2px solid #007bff;
+}
+
+.logo-img {
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Hình ảnh minh họa phía trên Form */
+.img1 {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 10px 0;
+}
+
+.img1 img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Container Form chính */
+.container.text-center.border {
+  width: 95% !important;
+  max-width: 500px !important; /* Thu gọn lại một chút cho cân đối */
+  margin: 30px auto !important;
+  padding: 40px 30px !important;
+  background-color: #ffffff !important;
+  border: none !important;
+  border-radius: 15px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Tiêu đề Đăng ký */
+.h2.text-primary {
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Tùy chỉnh các ô Input và Label */
+.form-label {
+  text-align: left;
+  display: block;
+  width: 100%;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  border-radius: 8px !important;
+  padding: 12px 15px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.1);
+}
+
+/* Xử lý lỗi tràn 600px trong code cũ */
+.row .col-12 {
+  width: 100% !important;
+}
+
+/* Nút bấm */
+button.btn-primary {
+  width: 100% !important;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  border: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+button.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Footer */
+footer {
+  background-color: #212529 !important;
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 576px) {
+  .container.text-center.border {
+    padding: 25px 10px !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+  }
+
+  .h2.text-primary {
+    font-size: 1.5rem;
+  }
+
+  .input-group-text {
+    display: none; /* Ẩn bớt đuôi email trên mobile để tránh tràn */
+  }
+}
+
+/* Ẩn các nút/biểu tượng hiện mật khẩu mặc định của trình duyệt */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-password-reveal-button,
+input[type="password"]::-webkit-textfield-decoration,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  display: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Tinh chỉnh nút ẩn/hiện để khớp chiều cao ô input */
+.input-group .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: calc(2.5rem + 5px);
+}

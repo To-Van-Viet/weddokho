@@ -1,0 +1,70 @@
+/* Kế thừa toàn bộ từ register.css của bạn */
+#khungtrang {
+  background: linear-gradient(90deg, #e0f7fa, #ffffff, #a8e6cf);
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: #0dcaf0; 
+  padding: 5px 0;
+}
+
+.marquee span {
+  display: inline-block;
+  font-weight: 500;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.container.text-center.border {
+  max-width: 450px !important; /* Đăng nhập cần gọn hơn đăng ký */
+  margin: 50px auto !important;
+  padding: 40px 30px !important;
+  background-color: #ffffff !important;
+  border: none !important;
+  border-radius: 15px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.h2.text-primary {
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  border-radius: 8px !important;
+  padding: 10px 15px;
+}
+
+button.btn-primary {
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: linear-gradient(to right, #007bff, #0056b3);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.input-group .btn {
+  height: auto;
+}

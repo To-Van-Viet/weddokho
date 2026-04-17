@@ -1,0 +1,95 @@
+.navbar { min-height: 75px; }
+    .navbar img.logo { height: 75px; width: auto; }
+    .row h5 { font-size: 20px; }
+    .row p  { font-size: 16px; line-height: 1.5; }
+.search-results-dropdown {
+    position: absolute; top: 100%; left: 0; width: 100%; z-index: 1050;
+    background: white; max-height: 350px; overflow-y: auto;
+    border-radius: 0 0 12px 12px; display: none;
+}
+.search-results-dropdown .list-group-item {
+    cursor: pointer; display: flex; align-items: center; gap: 12px; padding: 12px;
+}
+.search-results-dropdown img { width: 40px; height: 40px; border-radius: 4px; object-fit: cover; }
+   
+    @media (max-width: 576px) {
+      .row h5 { font-size: 7px; }
+      .row p  { font-size: 6px; line-height: 1.2}
+      .product-img {
+      height: 75px !important; 
+      }
+      .btn2 {
+        width: 100%;
+        height: 40px;
+        font-size: 7.5px;
+      }
+      strong{
+        font-size: 6px;
+      }
+      .comment-box-display{
+        font-size: 6px;
+        height: 30px  !important;
+      }
+      .con4{
+        width: 100%;
+      }
+      .footer-logo {
+      width: 70px;
+      height: 70px;
+    }
+    footer .col-4 {
+      flex: 0 0 33.333%; /* giữ đúng 3 cột, không văng ra ngoài */
+      max-width: 33.333%;
+    }
+    }
+    body {
+      padding-top: 75px; /* bằng chiều cao navbar */
+      overflow-x: hidden;
+    }
+    .con2 h5,p{
+      color: black;
+    }
+    .btn2{
+      background-color: brown !important;
+        color: white;
+        border-radius: 20px;
+    }
+    .video-frame {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-left: 35px;
+    }
+    .video-frame video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .comment-box {
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .comment-box-display {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 10px;
+      width: 100%;
+      height: 50px;
+    }
+    .special-col .comment-box-display {
+      margin-bottom: 5px;
+    }
+    img{
+      pointer-events: none;
+    }
+    .nav-link:hover{
+      color: orange !important;
+    }
+    button:hover{
+      transform: scale(1.2);
+      color: orange !important;
+    }
+    

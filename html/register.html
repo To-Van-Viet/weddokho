@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/register.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="shortcut icon" href="../img/logo2.png" type="image/x-icon" />
+    <title>Register</title>
+  </head>
+  <body>
+    
+    <div id="khungtrang">
+      <header class="header-section border border-3 border-warning shadow-sm sticky-top bg-dark">
+        <div class="container py-1 py-md-1">
+            <div class="row align-items-center">
+                <div class="col-md-2 col-4">
+                    <a href="../html/home.html" class="d-block text-center text-md-start">
+                        <img src="../img/logo.jpg" class="img-fluid logo-img" alt="Logo" style="max-height: 100px;">
+                    </a>
+                </div>
+                <div class="col-md-4 col-8 text-center">
+                  <h2 class="text-warning mb-0">Trang đăng ký</h2>  
+                </div>
+            </div>
+        </div>
+
+      </header>
+
+    <div class="banner">
+          <div class="marquee bg-info mx-auto">
+            <span class="text-black">Chào mừng bạn đến với website của chúng tôi. Rất hân hạnh được phục vụ bạn.</span>
+          </div>
+    </div>
+
+    <main >
+      <form id="registerForm">
+        
+        <div
+          class="container text-center mt-5 border border-3 bg-body-tertiary b rounded-2 flex-column mb-5"
+          style="width: 550px"
+        >
+          <div class="h2 text-primary">Đăng ký</div>
+          <div class="row mb-2">
+            <div class="col-6">
+              <label for="" class="form-label me-4">Họ và tên:</label>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-12" style="width: 600px">
+              <input
+                type="text"
+                id="name"
+                name="Name"
+                placeholder="Họ và tên"
+                class="form-control"
+                onblur="ktten()"
+                required
+              />
+            </div>
+            <div class="col-12 mt-1 text-danger text-start">
+              <span id="er1">*</span>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-6">
+              <label for="" class="form-label">Số điện thoại: </label>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-12" style="width: 600px">
+              <input
+                type="tel"
+                id="telnumber"
+                name="telnumber"
+                placeholder="Số điện thoại"
+                class="form-control"
+                onblur="kttel()"
+                required
+              />
+            </div>
+          </div>
+          <div class="col-12 mt-1 text-danger text-start">
+            <span class="me-4" id="er2">*</span>
+          </div>
+          <div class="row mb-2">
+            <div class="col-6">
+              <label for="" class="form-label me-4">Ngày sinh:</label>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-12" style="width: 600px">
+              <input
+                type="date"
+                id="date"
+                name="date"
+                placeholder="Ngày tháng năm sinh"
+                class="form-control"
+                onblur="checkAge()"
+                required
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-6">
+              <label for="" class="form-label me-1">Địa chỉ email:</label>
+            </div>
+          </div>
+          <div class="input-group mb-2">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              onblur="ktemail()"
+              required
+            />
+            <span class="input-group-text">@example.com</span>
+          </div>
+          <div class="col-12 mt-1 text-danger text-start">
+            <span class="me-3" id="er3">*</span>
+          </div>
+          <div class="row mb-2">
+            <div class="col-6">
+              <label for="" class="form-label me-4">Tên đăng nhập:</label>
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-12" style="width: 600px">
+              <input
+                type="text"
+                id="name23"
+                name="Name23"
+                placeholder="Tên đăng nhập"
+                class="form-control"
+                onblur="kttendn()"
+                required
+              />
+            </div>
+            <div class="col-12 mt-1 text-danger text-start">
+              <span id="er66">*</span>
+            </div>
+          </div>
+          <div class="row mb-2">
+  <div class="col-6">
+    <label class="form-label" for="pw">Mật khẩu:</label>
+  </div>
+</div>
+<div class="row mb-2">
+  <div class="col-12">
+    <div class="input-group">
+      <input
+        id="pw"
+        name="passwords"
+        type="password"
+        placeholder="Password"
+        class="form-control"
+        onblur="ktpassword()"
+        required
+      />
+      <button class="btn btn-outline-secondary" type="button" id="btnShow" onclick="togglePassword()">
+        Hiện
+      </button>
+    </div>
+    <div class="mt-1 text-start col-12">
+      <span id="er4" class="text-danger me-3  ">*</span>
+    </div>
+  </div>
+</div>  
+  <div class="row mb-2">
+  <div class="col-6">
+    <label class="form-label " for="pw2">Nhập lại mật khẩu:</label>
+  </div> 
+</div>
+<div class="row mb-2">
+  <div class="col-12">
+    <div class="input-group">
+      <input
+        id="pw2"
+        name="password2"
+        type="password"
+        placeholder="Confirm Password "
+        class="form-control"
+        onblur="checkpassword2()"
+        required
+      />
+      <button class="btn btn-outline-secondary" type="button" id="btnShow2" onclick="togglePassword2()">
+        Hiện
+      </button>
+    </div>
+    <div class="mt-1 text-start col-12">
+      <span id="er6" class="text-danger me-3  ">*</span>
+    </div>
+  </div>
+</div>  
+          <div class="row mb-2">
+            <div class="col-12">
+              <button
+              id="savebtn"
+                type="submit"
+                class="btn btn-primary"
+                style="width: 500px"
+              >
+                Lưu
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <footer style="
+  background-image: url('../img/footer.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px 0;">
+        <div class="container">
+            <div class="row text-center text-md-start">
+
+                <!-- Cột 1 -->
+                <div class="col-4 mb-3 d-flex flex-column align-items-center text-center">
+                    <img src="../img/logo.jpg" alt="Logo" class="footer-logo" style="width: 100px;height: 100px;">
+                    <p style="color: white; margin-top: 10px;">
+                        Chuyên cung cấp các loại đồ khô chất lượng, đảm bảo an toàn và nguồn gốc rõ ràng. Cam kết mang đến hương vị thơm ngon và sự hài lòng cho khách hàng
+                    </p>
+                </div>
+
+                <!-- Cột 2 -->
+                <div class="col-4 mb-3">
+                    <h5>Chi nhánh</h5>
+                    <hr style="border: none; border-top: 2px dotted #38ef7d;">
+                </div>
+
+                <!-- Cột 3 -->
+                <div class="col-4 mb-3">
+                    <h5>Liên hệ</h5>
+                    <hr style="border: none; border-top: 2px dotted #38ef7d;">
+                </div>
+
+            </div>
+        </div>
+    </footer>
+  </div>
+    </div>
+  </body>
+</html>
