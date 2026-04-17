@@ -81,3 +81,43 @@ body {
     .main-image-container { height: 280px; }
     .header-section .logo-img { max-height: 45px; }
 }
+/* Container chứa thanh search */
+.search-container {
+    width: 100%;
+    max-width: 600px; /* Chỉ rộng tối đa 600px trên máy tính */
+    margin: 0 10px;   /* Khoảng cách nhỏ 2 bên trên mobile */
+}
+
+/* Fix kết quả tìm kiếm trên điện thoại */
+.search-results-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important; /* Luôn nổi lên trên cùng */
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Khi ở trên điện thoại nhỏ (dưới 576px) */
+@media (max-width: 576px) {
+    .navbar .container-fluid {
+        flex-wrap: wrap; /* Cho phép các thành phần rớt dòng nếu quá chật */
+    }
+    
+    .search-container {
+        order: 3; /* Đưa thanh search xuống dưới cùng của Navbar trên mobile */
+        margin-top: 10px;
+        max-width: 100%;
+    }
+
+    .navbar img.logo {
+        height: 50px; /* Thu nhỏ logo lại cho đỡ chiếm chỗ */
+    }
+
+    /* Chỉnh lại icon tìm kiếm trong ô input */
+    .search-icon {
+        right: 15px !important;
+    }
+}
