@@ -1,0 +1,45 @@
+/* fonts chữ */
+@font-face {
+  font-family: 'DancingScript';
+  src: url('../fonts/DancingScript-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'DancingScript';
+  src: url('../fonts/DancingScript-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../fonts/Pacifico-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+ .card:hover {
+  transform: scale(1.05); /* phóng to nhẹ */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* đổ bóng */
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background-color: #141415 !important;
+  color:yellow !important; 
+  border-radius: 4px;
+}
+
+.marquee span {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  animation: marquee 8s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(200%); /* Bắt đầu từ ngoài cùng bên TRÁI */
+  }
+  100% {
+    transform: translateX(-100%); /* Kết thúc ở ngoài cùng bên PHẢI */
+  }
+}

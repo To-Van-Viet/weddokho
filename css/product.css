@@ -13,6 +13,13 @@ body {
     color: #444;
 }
 
+.nav-link:hover{
+      color: orange !important;
+    }
+   .nav button:hover{
+      transform: scale(1.2);
+      color: orange !important;
+    }
 /* Header & Icons */
 .icon-btn {
     width: 45px;
@@ -120,4 +127,12 @@ body {
     .search-icon {
         right: 15px !important;
     }
+}
+
+/* Bảng dropdown */
+@media (min-width: 992px) {
+  .navbar .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

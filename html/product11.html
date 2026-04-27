@@ -4,16 +4,48 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khô Sợi </title>
+    <title>Khô bò Sợi 1kg</title>
 
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/product.js"></script>
     <link rel="stylesheet" href="../css/product.css">
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/Information.js"></script>
+<link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
 
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
+       <audio id="bgMusic" autoplay loop muted hidden>
+  <source src="../img/nhacnen.mp3" type="audio/mpeg">
+</audio>
+<script>
+       //fix nhac
+        document.body.addEventListener("click", () => {
+            const audio = document.getElementById("bgMusic");
+            audio.muted = false;
+            audio.play();
+        });
+    
+</script>
 
     <header class="header-section shadow-sm sticky-top bg-white">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -38,18 +70,93 @@
                 <div class="collapse navbar-collapse" id="navbarMenu">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#tt">Thông tin</a></li>
+                   <li class="nav-item"><a class="nav-link" href="Information.html">Tin tức</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sản phẩm</a>
-                        <ul class="dropdown-menu">
-                            <li>
-                            <a class="dropdown-item" href="home.html#spc">Sản phẩm chính</a>
-                            </li>
-                            <li><a class="dropdown-item" href="home.html#spp">Sản phẩm phụ</a></li>
-                        </ul>
+                        <ul class="dropdown-menu p-4" style="min-width: 500px">
+                <!-- Row Sản phẩm chính -->
+                <div class="mb-3">
+                  <h6 class="dropdown-header">Sản phẩm chính</h6>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <li>
+                        <a class="dropdown-item" href="product1.html"
+                          >Khô heo cháy tỏi</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product2.html">Khô mực 1 nắng</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product3.html"
+                          >Khô gà lá chanh</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product4.html"
+                          >Mực xé sợi hấp dừa</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product5.html">Khô bò đen</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product6.html">Tôm tẩm sấy</a>
+                      </li>
+                    </div>
+                    <div class="col-md-6">
+                      <li>
+                        <a class="dropdown-item" href="product7.html"
+                          >Dâu tây sấy giòn</a
+                        >
+                      </li>
+                      <li><a class="dropdown-item" href="product8.html">Tôm khô</a></li>
+                      <li>
+                        <a class="dropdown-item" href="product9.html"
+                          >Khô cá chỉ 1 kg</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product10.html"
+                          >Khô cá chỉ 500 gram</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product11.html"
+                          >Khô bò sợi 1 kg</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product12.html"
+                          >Khô bò miếng 500 gram</a
+                        >
+                      </li>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Row Sản phẩm phụ -->
+                <div>
+                  <h6 class="dropdown-header">Sản phẩm phụ</h6>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <li><a class="dropdown-item" href="product13.html">Mít sấy</a></li>
+                      <li><a class="dropdown-item" href="product14.html">Nho khô</a></li>
+                    </div>
+                    <div class="col-md-6">
+                      <li>
+                        <a class="dropdown-item" href="product15.html">Chuối sấy</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product16.html">Miến khô</a>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#bl">Dịch vụ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#lh">Liên hệ</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Liên hệ</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.html">Đăng nhập</a></li>
                     <li class="nav-item"><a class="nav-link" href="register.html">Đăng ký</a></li>
                     </ul>
@@ -81,7 +188,7 @@
                     <div class="col-md-7 ps-md-5 mt-4 mt-md-0">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                                <li class="breadcrumb-item"><a href="home.html">Trang chủ</a></li>
                                 <li class="breadcrumb-item active">Sản phẩm</li>
                             </ol>
                         </nav>
@@ -173,40 +280,76 @@
             </div>
         </div>
     </main>
-
+ <!-- Modal Liên hệ -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width:600px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Liên hệ với chúng tôi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formLienHe">
+  <div class="mb-3">
+    <label for="hoVaTen" class="form-label">Họ và tên</label>
+    <input type="text" class="form-control" id="hoVaTen" placeholder="Nhập tên của bạn" />
+  </div>
+  <div class="mb-3">
+    <label for="thuDienTu" class="form-label">Email</label>
+    <input type="email" class="form-control" id="thuDienTu" placeholder="Nhập email" />
+  </div>
+  <div class="mb-3">
+    <label for="noiDungLienHe" class="form-label">Nội dung</label>
+    <textarea class="form-control" id="noiDungLienHe" rows="4" placeholder="Nhập nội dung liên hệ"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+    <button type="submit" class="btn btn-primary">Gửi liên hệ</button>
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
     <footer style="
   background-image: url('../img/footer.jpg');
   background-size: cover;
   background-position: center;
   color: white;
   padding: 40px 0;">
-        <div class="container">
-            <div class="row text-center text-md-start">
+    <div class="container">
+        <div class="row text-center text-md-start">
 
-                <!-- Cột 1 -->
-                <div class="col-4 mb-3 d-flex flex-column align-items-center text-center">
-                    <img src="../img/logo.jpg" alt="Logo" class="footer-logo" style="width: 100px;height: 100px;">
-                    <p style="color: white; margin-top: 10px;">
-                        Chuyên cung cấp các loại đồ khô chất lượng, đảm bảo an toàn và nguồn gốc rõ ràng. Cam kết mang
-                        đến hương vị thơm ngon và sự hài lòng cho khách hàng
-                    </p>
-                </div>
-
-                <!-- Cột 2 -->
-                <div class="col-4 mb-3">
-                    <h5>Chi nhánh</h5>
-                    <hr style="border: none; border-top: 2px dotted #38ef7d;">
-                </div>
-
-                <!-- Cột 3 -->
-                <div class="col-4 mb-3">
-                    <h5>Liên hệ</h5>
-                    <hr style="border: none; border-top: 2px dotted #38ef7d;">
-                </div>
-
+            <!-- Cột 1 -->
+            <div class="col-12 col-md-4 mb-3 d-flex flex-column align-items-center text-center">
+                <img src="../img/logof.png" alt="Logo" class="footer-logo img-fluid" style="max-width: 150px; height: auto;">
+                <p style="color: white; margin-top: 10px;">
+                    Chuyên cung cấp các loại đồ khô chất lượng, đảm bảo an toàn và nguồn gốc rõ ràng. Cam kết mang đến hương vị thơm ngon và sự hài lòng cho khách hàng
+                </p>
             </div>
+
+            <!-- Cột 2 -->
+            <div class="col-12 col-md-4 mb-3">
+                <h5 class="text-center">Chứng nhận</h5>
+                <hr style="border: none; border-top: 2px dotted #38ef7d;">
+                <div class="d-flex justify-content-center">
+                    <img src="../img/cn.png" alt="Chứng nhận" class="img-fluid" style="max-width: 80%;">
+                </div>
+            </div>
+
+            <!-- Cột 3 -->
+            <div class="col-12 col-md-4 mb-3" id="lh">
+                <h5 class="text-center">Liên hệ</h5>
+                <hr style="border: none; border-top: 2px dotted #38ef7d;">
+                <p style="color: white;">Email: Nhom7Mu@gmail.com</p>
+                <p style="color: white;">Facebook: Tiệm đồ khô Real</p>
+                <p style="color: white;">Số điện thoại: 0858953981</p>
+            </div>
+
         </div>
-    </footer>
+    </div>
+</footer>
+
 
 </body>
 

@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview</title>
+  
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/product.js"></script>
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/Overview.css">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/Information.js"></script>
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+       <audio id="bgMusic" autoplay loop muted hidden>
+  <source src="../img/nhacnen.mp3" type="audio/mpeg">
+</audio>
+<script>
+       //fix nhac
+        document.body.addEventListener("click", () => {
+            const audio = document.getElementById("bgMusic");
+            audio.muted = false;
+            audio.play();
+        });
+    
+</script>
+
+    <header class="header-section shadow-sm sticky-top bg-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a href="home.html">
+                    <img src="../img/logo.jpg" alt="Logo" class="logo" style="margin-right: 10px;">
+                </a>
+                <div class="d-flex justify-content-center flex-grow-1">
+                    <div class="position-relative search-container">
+                        <input type="text" id="searchInput" class="form-control ps-5" placeholder="Tìm kiếm" style="border-radius: 20px;">
+                        <div class="search-icon position-absolute top-50 end-0 translate-middle-y me-3">
+                            <img src="../img/icontk.png" alt="Icon tìm kiếm" width="14" height="14">
+                        </div>
+                        <div id="search-results" class="search-results-dropdown shadow-lg list-group"></div>
+                    </div>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Information.html">Tin tức</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sản phẩm</a>
+                        <ul class="dropdown-menu p-4" style="min-width: 500px">
+                <!-- Row Sản phẩm chính -->
+                <div class="mb-3">
+                  <h6 class="dropdown-header">Sản phẩm chính</h6>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <li>
+                        <a class="dropdown-item" href="product1.html"
+                          >Khô heo cháy tỏi</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product2.html">Khô mực 1 nắng</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product3.html"
+                          >Khô gà lá chanh</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product4.html"
+                          >Mực xé sợi hấp dừa</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product5.html">Khô bò đen</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product6.html">Tôm tẩm sấy</a>
+                      </li>
+                    </div>
+                    <div class="col-md-6">
+                      <li>
+                        <a class="dropdown-item" href="product7.html"
+                          >Dâu tây sấy giòn</a
+                        >
+                      </li>
+                      <li><a class="dropdown-item" href="product8.html">Tôm khô</a></li>
+                      <li>
+                        <a class="dropdown-item" href="product9.html"
+                          >Khô cá chỉ 1 kg</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product10.html"
+                          >Khô cá chỉ 500 gram</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product11.html"
+                          >Khô bò sợi 1 kg</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product12.html"
+                          >Khô bò miếng 500 gram</a
+                        >
+                      </li>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Row Sản phẩm phụ -->
+                <div>
+                  <h6 class="dropdown-header">Sản phẩm phụ</h6>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <li><a class="dropdown-item" href="product13.html">Mít sấy</a></li>
+                      <li><a class="dropdown-item" href="product14.html">Nho khô</a></li>
+                    </div>
+                    <div class="col-md-6">
+                      <li>
+                        <a class="dropdown-item" href="product15.html">Chuối sấy</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="product16.html">Miến khô</a>
+                      </li>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+                    </li>
+           
+                    <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Liên hệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Đăng nhập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Đăng ký</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+   <!-- Section giới thiệu -->
+  <div class="container py-5 shadow mt-5" style="background-color: #f0f8ff;margin-top: 150px !important;border-radius: 50px;">
+    <section class="text-center">
+     <h1 class="mb-3" 
+    style="font-family: DancingScript;
+           font-style: italic;
+           font-size: 350%;
+           background: linear-gradient(90deg, #ff0000, #ff4d4d, #ff9999);
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;">Giới thiệu Website Bán Đồ Khô</h1>
+      <p class="lead">
+        Đây là sản phẩm bài tập nhóm của chúng em với mục tiêu xây dựng một website bán đồ khô trực tuyến hiện đại,
+        tiện lợi và dễ sử dụng. Website được thiết kế nhằm mang đến cho khách hàng những trải nghiệm mua sắm
+        thân thiện, nhanh chóng và an toàn. Chúng em mong muốn tạo ra một không gian trực tuyến nơi mọi người
+        có thể dễ dàng tìm kiếm, lựa chọn và mua các sản phẩm đồ khô chất lượng cao.
+      </p>
+      <p>
+        Các mặt hàng mà website cung cấp bao gồm trái cây sấy, hạt dinh dưỡng, đồ khô truyền thống và nhiều loại
+        thực phẩm khô khác. Chúng em chú trọng đến việc đảm bảo nguồn gốc sản phẩm rõ ràng, giá cả hợp lý và
+        dịch vụ chăm sóc khách hàng tận tình. Bên cạnh đó, giao diện website được thiết kế trực quan, dễ thao tác,
+        phù hợp với nhiều đối tượng người dùng.
+      </p>
+      <p>
+        Thông qua dự án này, chúng em không chỉ rèn luyện kỹ năng lập trình Frontend mà còn học cách phối hợp
+        làm việc nhóm, phân chia công việc hợp lý và cùng nhau giải quyết các vấn đề phát sinh. Đây là cơ hội
+        để chúng em áp dụng kiến thức đã học vào thực tế, đồng thời phát triển thêm kỹ năng sáng tạo và tư duy
+        thiết kế giao diện người dùng.
+      </p>
+<div class="text-start" style="margin-left: 200px;" id="no1">
+  <p>
+    Website bán đồ khô của chúng em được xây dựng với nhiều chức năng hỗ trợ người dùng:
+  </p>
+  <p>-Website hiển thị danh mục sản phẩm đa dạng như trái cây sấy, hạt dinh dưỡng, đồ khô truyền thống.</p>
+  <p>-Người dùng có thể tìm kiếm sản phẩm nhanh chóng theo tên.</p>
+  <p>-Trang chi tiết sản phẩm cung cấp hình ảnh, giá cả và mô tả rõ ràng.</p>
+  <p>-Giỏ hàng tiện lợi giúp khách hàng thêm, xoá và quản lý sản phẩm muốn mua.</p>
+  <p>-Chức năng đăng nhập và đăng ký tài khoản để lưu thông tin.</p>
+  <p>-Trang tin tức cập nhật kiến thức về thực phẩm khô ,mẹo sử dụng và các ưu đãi hay cộng tác hấp dẫn.</p>
+  <p>-Trang liên hệ cho phép khách hàng gửi phản hồi hoặc yêu cầu hỗ trợ.</p>
+</div>
+
+
+    </section>
+  </div>
+
+  <!-- Section thành viên nhóm -->
+  <div class="container my-5 p-4 shadow" 
+     style="background: linear-gradient(135deg, #a2d2ff, #bde0fe, #cdeaff);
+ border-top-left-radius: 50px; border-top-right-radius: 50px;">
+    <section>
+      <h2 class="mb-4 text-center" style="font-family: DancingScript;
+           font-style: italic;
+           font-size: 350%;
+           background: linear-gradient(90deg, #ff0000, #ff4d4d, #ff9999);
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;">Thành viên nhóm 8</h2>
+      <div class="row justify-content-center g-4">
+
+        <!-- Card thành viên 1 -->
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm p-3 rounded">
+            <div class="row g-0 align-items-center">
+              <div class="col-5 text-center">
+                <img src="../img/hunglo.png" alt="Thành viên 1" class="img-fluid rounded-circle" style="max-width:120px;">
+              </div>
+              <div class="col-7">
+                <h5 class="mb-1">Đàm Quốc Hưng</h5>
+                <p class="text-muted mb-0">MSSV: 24689001</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card thành viên 2 -->
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm p-3 rounded">
+            <div class="row g-0 align-items-center">
+              <div class="col-5 text-center">
+                <img src="../img/huuchau.jpg" alt="Thành viên 2" class="img-fluid rounded-circle" style="max-width:120px;">
+              </div>
+              <div class="col-7">
+                <h5 class="mb-1">Dỗ Hữu Châu</h5>
+                <p class="text-muted mb-0">MSSV: 24688491</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card thành viên 3 -->
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm p-3 rounded">
+            <div class="row g-0 align-items-center">
+              <div class="col-5 text-center">
+                <img src="../img/Giahuy.png" alt="Thành viên 3" class="img-fluid rounded-circle" style="max-width:120px;">
+              </div>
+              <div class="col-7">
+                <h5 class="mb-1">Châu Gia Huy</h5>
+                <p class="text-muted mb-0">MSSV: 24695001</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card thành viên 4 -->
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm p-3 rounded">
+            <div class="row g-0 align-items-center">
+              <div class="col-5 text-center">
+                <img src="../img/khanh.jpg" alt="Thành viên 4" class="img-fluid rounded-circle" style="max-width:120px;">
+              </div>
+              <div class="col-7">
+                <h5 class="mb-1">Nguyễn Vũ Quốc Khánh</h5>
+                <p class="text-muted mb-0">MSSV: 24705431</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card thành viên 5 -->
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm p-3 rounded">
+            <div class="row g-0 align-items-center">
+              <div class="col-5 text-center">
+                <img src="../img/thanhdo.jpg" alt="Thành viên 5" class="img-fluid rounded-circle" style="max-width:120px;max-height: 120px;">
+              </div>
+              <div class="col-7">
+                <h5 class="mb-1">Phan Thanh Đô</h5>
+                <p class="text-muted mb-0">MSSV: 24700621</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card thành viên 6 -->
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm p-3 rounded">
+            <div class="row g-0 align-items-center">
+              <div class="col-5 text-center">
+                <img src="../img/thanh.png" alt="Thành viên 6" class="img-fluid rounded-circle" style="max-width:120px;">
+              </div>
+              <div class="col-7">
+                <h5 class="mb-1">Võ Chí Thành</h5>
+                <p class="text-muted mb-0">MSSV: 24639301</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card thành viên 7 -->
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm p-3 rounded">
+            <div class="row g-0 align-items-center">
+              <div class="col-5 text-center">
+                <img src="../img/anh.jpg" alt="Thành viên 7" class="img-fluid rounded-circle" style="max-width:120px;">
+              </div>
+              <div class="col-7">
+                <h5 class="mb-1">Tô Văn Việt</h5>
+                <p class="text-muted mb-0">MSSV: 24642021</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card thành viên 8 -->
+        <div class="col-12 col-md-6">
+          <div class="card shadow-sm p-3 rounded">
+            <div class="row g-0 align-items-center">
+              <div class="col-5 text-center">
+                <img src="../img/npc.png" alt="Thành viên 8" class="img-fluid rounded-circle" style="max-width:120px;">
+              </div>
+              <div class="col-7">
+                <h5 class="mb-1">Trần Tuấn Kiệt</h5>
+                <p class="text-muted mb-0">MSSV: 24695041</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  
+
+
+    
+     <!-- Modal Liên hệ -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width:600px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Liên hệ với chúng tôi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formLienHe">
+  <div class="mb-3">
+    <label for="hoVaTen" class="form-label">Họ và tên</label>
+    <input type="text" class="form-control" id="hoVaTen" placeholder="Nhập tên của bạn" />
+  </div>
+  <div class="mb-3">
+    <label for="thuDienTu" class="form-label">Email</label>
+    <input type="email" class="form-control" id="thuDienTu" placeholder="Nhập email" />
+  </div>
+  <div class="mb-3">
+    <label for="noiDungLienHe" class="form-label">Nội dung</label>
+    <textarea class="form-control" id="noiDungLienHe" rows="4" placeholder="Nhập nội dung liên hệ"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+    <button type="submit" class="btn btn-primary">Gửi liên hệ</button>
+  </div>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

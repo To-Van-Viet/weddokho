@@ -192,3 +192,45 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+ function previewImage(event) {
+    const input = event.target;
+    const preview = document.getElementById('preview');
+    if (input.files && input.files[0]) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  
+  function previewImage(event) {
+    const file = event.target.files[0];
+    const preview = document.getElementById('preview');
+    const errorSpan = document.getElementById('erFile');
+
+    if (file) {
+      const fileName = file.name.toLowerCase();
+      const validExtensions = /\.(jpg|jpeg|png|gif)$/i;
+
+      if (!validExtensions.test(fileName)) {
+        errorSpan.textContent = "Chỉ chấp nhận ảnh JPG, PNG, GIF.";
+        preview.style.display = "none";
+        preview.src = "";
+        return;
+      }
+
+      errorSpan.textContent = ""; // xoá lỗi nếu hợp lệ
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        preview.src = e.target.result;
+        preview.style.display = "block";
+      }
+      reader.readAsDataURL(file);
+    } else {
+      preview.src = "";
+      preview.style.display = "none";
+    }
+  }

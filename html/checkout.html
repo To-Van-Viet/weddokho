@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanh toán - Khô Gà Đè Tem</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/product.css" />
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="shortcut icon"
+      href="../favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="../favicon/favicon.ico" type="image/x-icon" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <style>
+      .checkout-container {
+        margin-top: 100px;
+        margin-bottom: 50px;
+      }
+      .order-summary {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 20px;
+      }
+      .product-img-checkout {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <audio id="bgMusic" autoplay loop muted hidden>
+      <source src="../img/nhacnen.mp3" type="audio/mpeg" />
+    </audio>
+    <script>
+      //fix nhac
+      document.body.addEventListener("click", () => {
+        const audio = document.getElementById("bgMusic");
+        audio.muted = false;
+        audio.play();
+      });
+    </script>
+    <header class="header-section shadow-sm sticky-top bg-white">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a href="home.html"
+            ><img
+              src="../img/logo.jpg"
+              alt="Logo"
+              class="logo"
+              style="margin-right: 10px"
+          /></a>
+          <span class="navbar-brand">THANH TOÁN ĐƠN HÀNG</span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container checkout-container">
+      <div class="row g-5">
+        <div class="col-md-7">
+          <h4 class="mb-3 fw-bold">Thông tin nhận hàng</h4>
+          <form id="checkoutForm">
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label">Họ và tên</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nguyễn Văn A"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Số điện thoại</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="090..."
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="col-12">
+                <label class="form-label">Địa chỉ nhận hàng</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Số nhà, tên đường, phường/xã..."
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <label class="form-label">Ghi chú (tùy chọn)</label>
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+
+            <hr class="my-4" />
+            <h4 class="mb-3 fw-bold">Phương thức thanh toán</h4>
+            <div class="my-3">
+              <div class="form-check">
+                <input
+                  name="paymentMethod"
+                  type="radio"
+                  class="form-check-input"
+                  checked
+                  required
+                />
+                <label class="form-check-label"
+                  >Thanh toán khi nhận hàng (COD)</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  name="paymentMethod"
+                  type="radio"
+                  class="form-check-input"
+                  required
+                />
+                <label class="form-check-label">Chuyển khoản ngân hàng</label>
+              </div>
+              <div class="form-check">
+                <input
+                  name="paymentMethod"
+                  type="radio"
+                  class="form-check-input"
+                  required
+                />
+                <label class="form-check-label">Ví điện tử</label>
+              </div>
+            </div>
+            <button class="w-100 btn btn-danger btn-lg mt-3" type="submit">
+              XÁC NHẬN ĐẶT HÀNG
+            </button>
+          </form>
+        </div>
+
+        <div class="col-md-5">
+          <div class="order-summary shadow-sm">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              <span class="text-dark fw-bold">Đơn hàng của bạn</span>
+              <span class="badge bg-danger rounded-pill" id="cartCount">0</span>
+            </h4>
+            <ul
+              class="list-group list-group-flush mb-3"
+              id="checkoutItems"
+            ></ul>
+            <div class="border-top pt-3">
+              <div class="d-flex justify-content-between">
+                <span>Tạm tính:</span>
+                <span id="subtotal">0đ</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span>Phí vận chuyển:</span>
+                <span>Miễn phí</span>
+              </div>
+              <div class="d-flex justify-content-between mt-2 pt-2 border-top">
+                <strong class="fs-5">TỔNG CỘNG:</strong>
+                <strong class="text-danger fs-5" id="totalOrder">0đ</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const itemsContainer = document.getElementById("checkoutItems");
+        const totalOrder = document.getElementById("totalOrder");
+        const subtotal = document.getElementById("subtotal");
+        const cartCount = document.getElementById("cartCount");
+
+        if (cart.length === 0) {
+          alert("Giỏ hàng trống, quay lại mua sắm nhé!");
+          window.location.href = "home.html";
+          return;
+        }
+
+        let total = 0;
+        cartCount.innerText = cart.length;
+
+        itemsContainer.innerHTML = cart
+          .map((item) => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            return `
+                <li class="list-group-item d-flex justify-content-between lh-sm bg-transparent border-0 px-0">
+                    <div class="d-flex gap-2">
+                        <img src="${item.img}" class="product-img-checkout">
+                        <div>
+                            <h6 class="my-0 fw-bold small">${item.name}</h6>
+                            <small class="text-muted">SL: ${item.quantity}</small>
+                        </div>
+                    </div>
+                    <span class="text-muted small">${itemTotal.toLocaleString()}đ</span>
+                </li>`;
+          })
+          .join("");
+
+        subtotal.innerText = total.toLocaleString() + "đ";
+        totalOrder.innerText = total.toLocaleString() + "đ";
+
+        // Xử lý khi nhấn đặt hàng
+        document
+          .getElementById("checkoutForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Cảm ơn bạn đã đặt hàng! Đơn hàng của bạn đang được xử lý.");
+            localStorage.removeItem("cart"); // Xóa giỏ hàng sau khi đặt thành công
+            window.location.href = "home.html";
+          });
+      });
+    </script>
+  </body>
+</html>

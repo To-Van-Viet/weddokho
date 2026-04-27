@@ -13,8 +13,8 @@
 .search-results-dropdown img { width: 40px; height: 40px; border-radius: 4px; object-fit: cover; }
    
     @media (max-width: 576px) {
-      .row h5 { font-size: 7px; }
-      .row p  { font-size: 6px; line-height: 1.2}
+      .row h5 { font-size: 10px; }
+      .row p  { font-size: 10px; line-height: 1.2}
       .product-img {
       height: 75px !important; 
       }
@@ -48,6 +48,7 @@
     }
     .con2 h5,p{
       color: black;
+      font-family: Pacifico;
     }
     .btn2{
       background-color: brown !important;
@@ -82,9 +83,15 @@
     .special-col .comment-box-display {
       margin-bottom: 5px;
     }
-    img{
-      pointer-events: none;
-    }
+ 
+   .imgk img {
+  transition: transform 0.3s ease !important; /* hiệu ứng mượt */
+}
+
+.imgk img:hover {
+  transform: scale(1.05) !important; /* phóng to nhẹ khi hover */
+}
+
     .nav-link:hover{
       color: orange !important;
     }
@@ -131,4 +138,31 @@
     .search-icon {
         right: 15px !important;
     }
+}
+
+
+/* fonts chữ */
+@font-face {
+  font-family: 'DancingScript';
+  src: url('../fonts/DancingScript-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'DancingScript';
+  src: url('../fonts/DancingScript-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../fonts/Pacifico-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+/* Bảng dropdown */
+@media (min-width: 992px) {
+  .navbar .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

@@ -9,26 +9,54 @@
     <script src="../js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="../css/register.css" />
     <link rel="shortcut icon" href="../img/logo2.png" type="image/x-icon" />
-    <title>Register</title>
+    <title>Đăng ký</title>
+    <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
+<link rel="icon" href="../favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
   </head>
   <body>
+       <audio id="bgMusic" autoplay loop muted hidden>
+  <source src="../img/nhacnen.mp3" type="audio/mpeg">
+</audio>
+<script>
+       //fix nhac
+        document.body.addEventListener("click", () => {
+            const audio = document.getElementById("bgMusic");
+            audio.muted = false;
+            audio.play();
+        });
+    
+</script>
     
     <div id="khungtrang">
       <header class="header-section border border-3 border-warning shadow-sm sticky-top bg-dark">
-        <div class="container py-1 py-md-1">
-            <div class="row align-items-center">
-                <div class="col-md-2 col-4">
-                    <a href="../html/home.html" class="d-block text-center text-md-start">
-                        <img src="../img/logo.jpg" class="img-fluid logo-img" alt="Logo" style="max-height: 100px;">
-                    </a>
-                </div>
-                <div class="col-md-4 col-8 text-center">
-                  <h2 class="text-warning mb-0">Trang đăng ký</h2>  
-                </div>
-            </div>
+        <div class="container py-1">
+          <div class="d-flex align-items-center justify-content-between">
+            <a href="../html/home.html" class="d-block">
+              <img src="../img/logo.jpg" class="img-fluid logo-img" alt="Logo" style="max-height: 80px;">
+            </a>
+            <h2 class="text-warning mb-0 mx-auto">Trang đăng ký</h2>
+          </div>
         </div>
+</header>
 
-      </header>
 
     <div class="banner">
           <div class="marquee bg-info mx-auto">
@@ -41,7 +69,7 @@
         
         <div
           class="container text-center mt-5 border border-3 bg-body-tertiary b rounded-2 flex-column mb-5"
-          style="width: 550px"
+          style="width: 550px;"
         >
           <div class="h2 text-primary">Đăng ký</div>
           <div class="row mb-2">
@@ -196,7 +224,35 @@
       <span id="er6" class="text-danger me-3  ">*</span>
     </div>
   </div>
-</div>  
+</div>
+
+<div class="row mb-2">
+
+  <div class="col-6">
+    <div class="input-group">
+      <input 
+        id="fileInput" 
+        type="file" 
+        accept=".jpg,.jpeg,.png,.gif" 
+        class="form-control" 
+        onchange="previewImage(event)" 
+        required
+      />
+    </div>
+    <div class="mt-1 text-start">
+      <span id="erFile" class="text-danger"></span>
+    </div>
+  </div>
+  <div class="col-6 d-flex justify-content-center align-items-center">
+    <img id="preview" 
+         src="" 
+         alt="Ảnh đã chọn" 
+         class="rounded-circle border border-2" 
+         style="width: 120px; height: 120px; object-fit: cover; display: none;">
+  </div>
+</div>
+
+
           <div class="row mb-2">
             <div class="col-12">
               <button
@@ -210,41 +266,13 @@
             </div>
           </div>
         </div>
+
+
+      
       </form>
     </main>
 
-    <footer style="
-  background-image: url('../img/footer.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 40px 0;">
-        <div class="container">
-            <div class="row text-center text-md-start">
-
-                <!-- Cột 1 -->
-                <div class="col-4 mb-3 d-flex flex-column align-items-center text-center">
-                    <img src="../img/logo.jpg" alt="Logo" class="footer-logo" style="width: 100px;height: 100px;">
-                    <p style="color: white; margin-top: 10px;">
-                        Chuyên cung cấp các loại đồ khô chất lượng, đảm bảo an toàn và nguồn gốc rõ ràng. Cam kết mang đến hương vị thơm ngon và sự hài lòng cho khách hàng
-                    </p>
-                </div>
-
-                <!-- Cột 2 -->
-                <div class="col-4 mb-3">
-                    <h5>Chi nhánh</h5>
-                    <hr style="border: none; border-top: 2px dotted #38ef7d;">
-                </div>
-
-                <!-- Cột 3 -->
-                <div class="col-4 mb-3">
-                    <h5>Liên hệ</h5>
-                    <hr style="border: none; border-top: 2px dotted #38ef7d;">
-                </div>
-
-            </div>
-        </div>
-    </footer>
+    
   </div>
     </div>
   </body>
